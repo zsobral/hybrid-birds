@@ -1,3 +1,3 @@
 # hybrid-birds
 
-https://hybrid-birds.netlify.app/
+https://birds.mateus.dev
