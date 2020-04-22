@@ -57,17 +57,22 @@ export const DARK_THEME = {
   breakpoints: BREAKPOINTS,
 }
 
-export const ThemeContext = createContext()
+export const ThemeContext = createContext({
+  theme: LIGHT_THEME,
+  switchTheme: () => {},
+})
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(
-    localStorage.getItem('theme') === DARK_THEME.name ? DARK_THEME : LIGHT_THEME
+    window?.localStorage.getItem('theme') === DARK_THEME.name
+      ? DARK_THEME
+      : LIGHT_THEME
   )
 
   const switchTheme = () => {
     const currentTheme =
       theme.name === LIGHT_THEME.name ? DARK_THEME : LIGHT_THEME
-    localStorage.setItem('theme', currentTheme.name)
+    window?.localStorage.setItem('theme', currentTheme.name)
     setTheme(currentTheme)
   }
 
