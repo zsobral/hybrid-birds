@@ -2,13 +2,13 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import { styled } from './theme'
-import { SwitchThemeButton } from './switch-theme-button'
 import { Egg } from './icon'
 
 const StyledHeader = styled('header', ({ $theme }) => ({
   backgroundColor: $theme.colors.headerBackgroundColor,
   color: $theme.colors.headerColor,
-  transition: 'background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out',
+  transition:
+    'background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out',
   borderBottom: $theme.colors.headerBorder,
 }))
 
@@ -51,7 +51,6 @@ export const Header = ({ siteTitle }) => (
           {siteTitle}
         </StyledLink>
       </StyledHeaderTitle>
-      <SwitchThemeButton />
     </StyledContainer>
   </StyledHeader>
 )
