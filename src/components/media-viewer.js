@@ -57,6 +57,7 @@ const StyledNavButton = styled('button', ({ $theme }) => ({
   position: 'relative',
   display: 'flex',
   justifyContent: 'center',
+  alignItems: 'center',
   background: '#FFFFFF',
   border: 'none',
   borderRadius: '9999px',
